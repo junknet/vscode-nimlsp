@@ -20,10 +20,40 @@
     "languages": [
       {
         "id": "nim",
+        "aliases": [
+          "Nim",
+          "nim"
+        ],
         "extensions": [
-          ".nim"
+          ".nim",
+          ".nims",
+          "nim.cfg",
+          ".nim.cfg"
         ],
         "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "nimble",
+        "aliases": [
+          "Nimble",
+          "nimble"
+        ],
+        "extensions": [
+          ".nimble"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nim",
+        "scopeName": "source.nim",
+        "path": "./syntaxes/nim.json"
+      },
+      {
+        "language": "nimble",
+        "scopeName": "source.nimble",
+        "path": "./syntaxes/nimble.json"
       }
     ],
     "commands": [
@@ -34,6 +64,12 @@
       {
         "command": "nimd.restart",
         "title": "nimd: Restart language server"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "nim",
+        "path": "./snippets/nim.json"
       }
     ]
   },

@@ -1,5 +1,3 @@
-import { chownSync } from 'node:fs';
-import { config } from 'node:process';
 import * as vscode from 'vscode';
 import * as vscodelc from 'vscode-languageclient/node';
 
