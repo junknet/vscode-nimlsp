@@ -22,7 +22,8 @@
         "id": "nim",
         "extensions": [
           ".nim"
-        ]
+        ],
+        "configuration": "./language-configuration.json"
       }
     ],
     "commands": [
