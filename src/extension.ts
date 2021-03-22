@@ -1,21 +1,21 @@
 import * as vscode from 'vscode';
-import { NimdContext } from './nimd-context';
+import { NimlspContext } from './nimlsp-context';
 
 
 
 export async function activate(context: vscode.ExtensionContext) {
-	const outputChannel = vscode.window.createOutputChannel('nimd');
+	const outputChannel = vscode.window.createOutputChannel('nimlsp');
 	context.subscriptions.push(outputChannel);
 	
-	const nimdContext = new NimdContext;
-	context.subscriptions.push(nimdContext);
-	context.subscriptions.push(vscode.commands.registerCommand('nimd.activate', async () => { }));
-	context.subscriptions.push(vscode.commands.registerCommand('nimd.restart', async () => {
-		nimdContext.dispose();
-		await nimdContext.activate(outputChannel);
+	const nimlspContext = new NimlspContext;
+	context.subscriptions.push(nimlspContext);
+	context.subscriptions.push(vscode.commands.registerCommand('nimlsp.activate', async () => { }));
+	context.subscriptions.push(vscode.commands.registerCommand('nimlsp.restart', async () => {
+		nimlspContext.dispose();
+		await nimlspContext.activate(outputChannel);
 	}));
 	
-	await nimdContext.activate(outputChannel);
+	await nimlspContext.activate(outputChannel);
 }
 
 export function deactivate() {}

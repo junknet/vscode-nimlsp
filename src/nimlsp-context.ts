@@ -29,18 +29,18 @@ class EnableEditsNearCursorFeature implements vscodelc.StaticFeature {
   dispose() {}
 }
 
-export class NimdContext implements vscode.Disposable {
+export class NimlspContext implements vscode.Disposable {
   subscriptions: vscode.Disposable[] = [];
   client: NimdLanguageClient;
 
   async activate(outputChannel: vscode.OutputChannel) {
-    const nimdPath = "/home/junknet/Desktop/nimlsp/nimd";
-    const nimd: vscodelc.Executable = {
-      command: nimdPath,
+    const nimlspPath = "/home/junknet/Desktop/nimlsp/nimd";
+    const nimlsp: vscodelc.Executable = {
+      command: nimlspPath,
       args: ["/home/junknet/Downloads/Nim-1.4.4"],
       options: {cwd:vscode.workspace.workspaceFolders[0].uri.fsPath}
     };
-    const serverOptions: vscodelc.ServerOptions = nimd;
+    const serverOptions: vscodelc.ServerOptions = nimlsp;
 
     const clientOptions: vscodelc.LanguageClientOptions = {
       // Register the server for c-family and cuda files.

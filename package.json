@@ -1,6 +1,6 @@
 {
-  "name": "nimd",
-  "displayName": "NimD",
+  "name": "nimlsp",
+  "displayName": "nimlsp",
   "description": "nim lsp extension",
   "version": "0.0.1",
   "engines": {
@@ -13,7 +13,7 @@
   ],
   "activationEvents": [
     "onLanguage:nim",
-    "onCommand:nimd.activate"
+    "onCommand:nimlsp.activate"
   ],
   "main": "./out/src/extension.js",
   "contributes": {
@@ -58,12 +58,12 @@
     ],
     "commands": [
       {
-        "command": "nimd.activate",
-        "title": "nimd: Manually activate extension"
+        "command": "nimlsp.activate",
+        "title": "nimlsp: Manually activate extension"
       },
       {
-        "command": "nimd.restart",
-        "title": "nimd: Restart language server"
+        "command": "nimlsp.restart",
+        "title": "nimlsp: Restart language server"
       }
     ],
     "snippets": [
