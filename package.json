@@ -44,6 +44,28 @@
         "configuration": "./language-configuration.json"
       }
     ],
+    "configuration": [
+      {
+        "type": "object",
+        "title": "nimlsp",
+        "properties": {
+          "nimlsp.path": {
+            "type": "string",
+            "default": "nimlsp",
+            "scope": "machine-overridable",
+            "description": "The path to nimlsp executable, e.g.: /usr/bin/nimlsp."
+          },
+          "nimlsp.arguments": {
+            "type": "array",
+            "default": [],
+            "items": {
+              "type": "string"
+            },
+            "description": "Arguments for nimlsp server."
+          }
+        }
+      }
+    ],
     "grammars": [
       {
         "language": "nim",

@@ -1,3 +1,4 @@
+import { copyFileSync } from 'node:fs';
 import * as vscode from 'vscode';
 import * as vscodelc from 'vscode-languageclient/node';
 
@@ -34,10 +35,11 @@ export class NimlspContext implements vscode.Disposable {
   client: NimdLanguageClient;
 
   async activate(outputChannel: vscode.OutputChannel) {
-    const nimlspPath = "/home/junknet/Desktop/nimlsp/nimd";
+    const nimlspPath = vscode.workspace.getConfiguration('nimlsp').get<string>('path');
+    const nimlspArgs = vscode.workspace.getConfiguration('nimlsp').get<string[]>('arguments');
     const nimlsp: vscodelc.Executable = {
       command: nimlspPath,
-      args: ["/home/junknet/Downloads/Nim-1.4.4"],
+      args: nimlspArgs,
       options: {cwd:vscode.workspace.workspaceFolders[0].uri.fsPath}
     };
     const serverOptions: vscodelc.ServerOptions = nimlsp;
