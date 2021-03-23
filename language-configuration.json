@@ -25,9 +25,10 @@
     ["\"", "\""],
     ["'", "'"]
   ],
+  "wordPattern": "(-?\\d*\\.\\d\\w*)|([^\\`\\~\\!\\@\\#\\%\\^\\&\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\?\\s]+)",
   "indentationRules": {
-    "increaseIndentPattern": "^.*\\{[^}\"']*$|^.*\\([^\\)\"']*$",
-    "decreaseIndentPattern": "^\\s*(\\s*\\/[*].*[*]\\/\\s*)*[})]"
+    "increaseIndentPattern": "^\\s*((proc|macro|iterator|template|converter|func) .*=)|(import|export|let|var|const|type)|([^:]+:)\\s*$",
+    "decreaseIndentPattern": "^\\s*(\\s*\\/[*].*[*]\\/2\\s*)*[})]"
   },
   "folding": {
     "markers": {

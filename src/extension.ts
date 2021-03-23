@@ -7,7 +7,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	const outputChannel = vscode.window.createOutputChannel('nimlsp');
 	context.subscriptions.push(outputChannel);
 	
-	const nimlspContext = new NimlspContext;
+	const nimlspContext =  new NimlspContext;
 	context.subscriptions.push(nimlspContext);
 	context.subscriptions.push(vscode.commands.registerCommand('nimlsp.activate', async () => { }));
 	context.subscriptions.push(vscode.commands.registerCommand('nimlsp.restart', async () => {

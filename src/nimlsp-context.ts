@@ -95,7 +95,6 @@ export class NimlspContext implements vscode.Disposable {
         },
       },
     };
-
     this.client = new NimdLanguageClient('Nim Language Server',
                                            serverOptions, clientOptions);
     this.client.clientOptions.errorHandler =
