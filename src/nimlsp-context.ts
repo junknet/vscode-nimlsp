@@ -2,7 +2,7 @@ import { copyFileSync } from 'node:fs';
 import * as vscode from 'vscode';
 import * as vscodelc from 'vscode-languageclient/node';
 
-class NimdLanguageClient extends vscodelc.LanguageClient {
+class NimlspLanguageClient extends vscodelc.LanguageClient {
   // Override the default implementation for failed requests. The default
   // behavior is just to log failures in the output panel, however output panel
   // is designed for extension debugging purpose, normal users will not open it,
@@ -32,7 +32,7 @@ class EnableEditsNearCursorFeature implements vscodelc.StaticFeature {
 
 export class NimlspContext implements vscode.Disposable {
   subscriptions: vscode.Disposable[] = [];
-  client: NimdLanguageClient;
+  client: NimlspLanguageClient;
 
   async activate(outputChannel: vscode.OutputChannel) {
     const nimlspPath = vscode.workspace.getConfiguration('nimlsp').get<string>('path');
@@ -95,7 +95,7 @@ export class NimlspContext implements vscode.Disposable {
         },
       },
     };
-    this.client = new NimdLanguageClient('Nim Language Server',
+    this.client = new NimlspLanguageClient('Nim Language Server',
                                            serverOptions, clientOptions);
     this.client.clientOptions.errorHandler =
         this.client.createDefaultErrorHandler(
