@@ -1,6 +1,6 @@
 # nimlsp
 
-Provides C/C++ language IDE features for VS Code using [nimlsp]("https://github.com/PMunch/nimlsp")
+Provides Nim language IDE features for VS Code using [nimlsp]("https://github.com/PMunch/nimlsp")
 
 ## Requirements
 
