@@ -1,7 +1,7 @@
 {
   "comments": {
-    "lineComment": "//",
-    "blockComment": ["/*", "*/"]
+    "lineComment": "#",
+    "blockComment": ["#[", "]#"]
   },
   "brackets": [
     ["{", "}"],
@@ -26,10 +26,14 @@
     ["'", "'"]
   ],
   "wordPattern": "(-?\\d*\\.\\d\\w*)|([^\\`\\~\\!\\@\\#\\%\\^\\&\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\?\\s]+)",
-  "indentationRules": {
-    "increaseIndentPattern": "^\\s*((proc|macro|iterator|template|converter|func) .*=)|(import|export|let|var|const|type)|([^:]+:)\\s*$",
-    "decreaseIndentPattern": "^\\s*(\\s*\\/[*].*[*]\\/2\\s*)*[})]"
-  },
+  "onEnterRules": [
+    {
+      "beforeText": "^\\s*((proc|macro|iterator|template|converter|func) .*=)|(export|let|var|const|type)|([^:]+:)\\s*$",
+      "action": {
+        "indent": "indent"
+      }
+    }
+  ],
   "folding": {
     "markers": {
       "start": "^\\s*//\\s*#?region\\b",
