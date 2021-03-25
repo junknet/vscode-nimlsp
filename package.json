@@ -2,8 +2,9 @@
   "name": "nimlsp",
   "displayName": "nimlsp",
   "description": "nim lsp extension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "junknet",
+  "icon": "image/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/junknet/vscode-nimlsp"
@@ -13,8 +14,7 @@
   },
   "categories": [
     "Programming Languages",
-    "Linters",
-    "Formatters"
+    "Linters"
   ],
   "activationEvents": [
     "onLanguage:nim",
