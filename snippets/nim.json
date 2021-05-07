@@ -70,7 +70,7 @@
     },
     "type": {
       "prefix": "type",
-      "body": "type\n\t$1 = $2\n\t$0"
+      "body": "type\n\t$1 = ${2:object}\n\t\t$0"
     },
     "enum": {
       "prefix": "enum",

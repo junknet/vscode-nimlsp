@@ -2,7 +2,7 @@
   "name": "nimlsp",
   "displayName": "nimlsp",
   "description": "nim lsp extension",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "junknet",
   "icon": "image/icon.png",
   "repository": {
