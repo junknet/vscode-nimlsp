@@ -28,7 +28,13 @@
   "wordPattern": "(-?\\d*\\.\\d\\w*)|([^\\`\\~\\!\\@\\#\\%\\^\\&\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\?\\s]+)",
   "onEnterRules": [
     {
-      "beforeText": "^\\s*((proc|macro|iterator|template|converter|func) .*=)|(export|let|var|const|type)|([^:]+:)\\s*$",
+      "beforeText": "^\\s*((proc|macro|iterator|template|converter|func) .*=)|([^:]+:)\\s*$",
+      "action": {
+        "indent": "indent"
+      }
+    },
+    {
+      "beforeText": "^(export|let|var|const|type)$",
       "action": {
         "indent": "indent"
       }
